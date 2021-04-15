@@ -1,0 +1,18 @@
+# java -jar swagger-codegen-cli.jar generate -i tests/minimal.yaml -l html2 -o tests
+openapi: 3.0.0
+
+info:
+  title: Router API
+  description: This provides the parameters that gateway needs to processes
+    each payment.
+  version: 1.0.0
+
+tags:
+  - name: router
+    description: Provides the best route for a payment.
+
+paths:
+
+  /route:
+    post:
+

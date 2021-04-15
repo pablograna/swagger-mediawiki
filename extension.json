@@ -1,0 +1,36 @@
+{
+    "name": "Swagger",
+    "version": "0.1",
+    "author": [
+        "Pablo Gra\\~na"
+    ],
+    "url": "https://www.mediawiki.org/wiki/Extension:Swagger",
+    "descriptionmsg": "swagger-desc",
+    "license-name": "GPL-2.0",
+    "type": "parserhook",
+    "requires": {
+        "MediaWiki": ">= 1.26.0"
+    },
+    "config": {
+        "SwaggerDebug": false,
+        "SwaggerJarFile": "swagger-codegen-cli.jar"
+    },
+    "ConfigRegistry": {
+        "Swagger": "GlobalVarConfig::newInstance"
+    },
+    "APIModules": {
+    },
+    "AutoloadClasses": {
+        "Swagger": "Swagger.body.php"
+    },
+    "Hooks": {
+        "ParserFirstCallInit": [
+            "Swagger::onParserFirstCallInit"
+        ],
+        "PageContentSave": [
+            "Swagger::onPageContentSave"
+        ]
+    },
+    "manifest_version": 1
+}
+
