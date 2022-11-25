@@ -1,0 +1,48 @@
+# java -jar swagger-codegen-cli.jar generate -i tests/sample.yaml -l html -o tests
+openapi: 3.0.0
+
+info:
+  title: API
+  description: Process.
+  version: 1.0.0
+
+tags:
+  - name: info
+    description: Provides info.
+
+paths:
+
+  /info:
+    post:
+      description: |
+              Right:
+              * item1: 1
+              * item2: 2
+
+      responses:
+        "200":
+          description: |
+              Wrong:
+              * item3: 3
+              * item4: 4
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Object"
+
+components:
+  schemas:
+
+    Object:
+      description: |
+              Wrong:
+              * item5: 5
+              * item6: 6
+      type: object
+      properties:
+        prop:
+          description: |
+              Wrong:
+              * item7: 7
+              * item8: 8
+

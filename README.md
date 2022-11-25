@@ -21,10 +21,14 @@ plugin for [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki).
 
    `mv <downloaddir>/*`
 
-1. Get the swagger-codegen-cli-3.0.25.jar from maven central
+1. Get the swagger-codegen-cli-3.0.36.jar from maven central
 
-   `wget https://repo1.maven.org/maven2/io/swagger/codegen/v3/swagger-codegen-cli/3.0.25/swagger-codegen-cli-3.0.25.jar`
+   `wget https://repo1.maven.org/maven2/io/swagger/codegen/v3/swagger-codegen-cli/3.0.36/swagger-codegen-cli-3.0.36.jar`
    
+1. Copy it to the Swagger extension directory:
+
+   `mv swagger-codegen-cli-3.0.36.jar swagger-codegen-cli.jar`
+
 1. (Optional) Adapt the getUploadPath and getUploadDirectory to your
    preference if you want these different from MediaWiki's standard settings.
    Mind that these directories must be writeable by the system user who runs
@@ -43,4 +47,10 @@ plugin for [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki).
 
 # Issues
 If you have suggestions or remarks, please [file an issue](https://github.com/pablograna/swagger-mediawiki/issues)!
+
+There is a pending issue in swagger-codegen-generators
+(https://github.com/swagger-api/swagger-codegen-generators/issues/1087), to be
+fixed in https://github.com/swagger-api/swagger-codegen-generators/pull/1088.
+For the time being, you can get a build that includes the fix from this
+repository (swagger-codegen-cli.jar).
 
